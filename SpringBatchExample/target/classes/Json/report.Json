@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"Nome": "Joelynn",
+		"Sobrenome": "Presland",
+		"email": "jpresland0@oakley.com",
+		"cpf": "608-46-4327",
+		"endereco": [
+			{
+				"rua": "Cordelia",
+				"numero": "1558",
+				"complemento": "Point"
+			},
+			{
+				"rua": "Bluestem",
+				"numero": "1883",
+				"complemento": "Place"
+			},
+			{
+				"rua": "Independence",
+				"numero": "500",
+				"complemento": "Road"
+			}
+		]
+	}
+]
