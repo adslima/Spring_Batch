@@ -12,13 +12,13 @@ import java.util.Map;
 import org.springframework.batch.item.file.LineMapper;
 import org.springframework.batch.item.file.mapping.JsonLineMapper;
 
-import com.mkyong.model.Report2;
+import com.mkyong.model.Person;
 
 /**
  * @author <a href="mailto:andrews.silva@accenture.com">andrews.silva</a>
  * @date 27 de out de 2017 15:04:49
  */
-public class Report2LineMapper implements LineMapper<Report2> {
+public class PersonLineMapper implements LineMapper<Person> {
 
 	/**
 	 *
@@ -29,10 +29,10 @@ public class Report2LineMapper implements LineMapper<Report2> {
 	 *
 	 * @see org.springframework.batch.item.file.LineMapper#mapLine(java.lang.String, int) */
 	@Override
-	public Report2 mapLine(final String line, final int lineNumber) throws Exception {
+	public Person mapLine(final String line, final int lineNumber) throws Exception {
 		final Map<String, Object> report2AsMap = this.m.mapLine(line, lineNumber);
 
-		final Report2 report2 = new Report2();
+		final Person report2 = new Person();
 		// map fields
 		return report2;
 	}

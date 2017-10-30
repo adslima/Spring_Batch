@@ -1,7 +1,5 @@
 package com.mkyong.model;
 
-import java.util.List;
-
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -11,14 +9,14 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @date 27 de out de 2017 14:33:00
  */
 @XmlRootElement(name = "record")
-public class Report2 {
+public class Person {
 
 	private Long id;
 	private String nome;
 	private String sobrenome;
 	private String email;
 	private String cpf;
-	private List<Endereco> endereco;
+	private Endereco[] endereco;
 
 	/**
 	 * @return retorna o valor de {@link #id}
@@ -105,20 +103,11 @@ public class Report2 {
 		this.cpf = cpf;
 	}
 
-	/**
-	 * @return retorna o valor de {@link #endereco}
-	 */
-	@XmlAttribute(name = "endereco")
-	public List<Endereco> getEndereco() {
-		return this.endereco;
+	public Endereco[] getEndereco() {
+		return endereco;
 	}
 
-	/**
-	 * seta o valor do parametro endereco no atributo {@link #endereco}
-	 *
-	 * @param endereco
-	 */
-	public void setEndereco(final List<Endereco> endereco) {
+	public void setEndereco(Endereco[] endereco) {
 		this.endereco = endereco;
 	}
 
