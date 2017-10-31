@@ -26,22 +26,12 @@ public class PersonJsonLineMapper implements LineMapper<Person> {
 	 */
 	private JsonLineMapper m;
 
-	// /* (non-Javadoc)
-	// *
-	// * @see org.springframework.batch.item.file.LineMapper#mapLine(java.lang.String, int) */
-	// @Override
-	// public Person mapLine(final String line, final int lineNumber) throws Exception {
-	// final Map<String, Object> report2AsMap = this.m.mapLine(line, lineNumber);
-	//
-	// final Person report2 = new Person();
-	// // map fields
-	// return report2;
-	// }
-
+	/* (non-Javadoc)
+	 *
+	 * @see org.springframework.batch.item.file.LineMapper#mapLine(java.lang.String, int) */
 	@Override
 	public Person mapLine(final String line, final int lineNumber) throws Exception {
 
-		// JSON
 		final Map<String, Object> personAsMap = this.m.mapLine(line, lineNumber);
 
 		final Person person = new Person();
@@ -56,12 +46,6 @@ public class PersonJsonLineMapper implements LineMapper<Person> {
 		return person;
 	}
 
-	/**
-	 *
-	 * <code><pre></pre></code>
-	 *
-	 * @param m void
-	 */
 	public void setM(final JsonLineMapper m) {
 		this.m = m;
 	}

@@ -104,10 +104,10 @@ public class Person {
 	}
 
 	public Endereco[] getEndereco() {
-		return endereco;
+		return this.endereco;
 	}
 
-	public void setEndereco(Endereco[] endereco) {
+	public void setEndereco(final Endereco[] endereco) {
 		this.endereco = endereco;
 	}
 

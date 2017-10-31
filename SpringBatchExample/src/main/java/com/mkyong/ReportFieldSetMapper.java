@@ -18,10 +18,16 @@ public class ReportFieldSetMapper implements FieldSetMapper<Report> {
 
 	private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
+	/* (non-Javadoc)
+	 *
+	 * @see
+	 * org.springframework.batch.item.file.mapping.FieldSetMapper#mapFieldSet(org.springframework.batch.item.
+	 * file.transform.FieldSet) */
 	@Override
 	public Report mapFieldSet(final FieldSet fieldSet) throws BindException {
 
 		final Report report = new Report();
+
 		report.setId(fieldSet.readInt(0));
 		report.setSales(fieldSet.readBigDecimal(1));
 		report.setQty(fieldSet.readInt(2));

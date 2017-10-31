@@ -30,11 +30,11 @@
 				<property name="lineTokenizer">
 					<bean
 						class="org.springframework.batch.item.file.transform.DelimitedLineTokenizer">
-						<property name="names" value="id,sales,qty,staffName,date" />
+						<property name="names" value="id,name,sobrenome,emial,cpf,endereco" />
 					</bean>
 				</property>
 				<property name="fieldSetMapper">
-					<bean class="com.mkyong.ReportFieldSetMapper" />
+					<bean class="com.mkyong.PersonFieldSetMapper" />
 
 					<!-- if no data type conversion, use BeanWrapperFieldSetMapper to map 
 						by name <bean class="org.springframework.batch.item.file.mapping.BeanWrapperFieldSetMapper"> 
